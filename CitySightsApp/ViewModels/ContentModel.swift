@@ -12,6 +12,8 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
     
     var locationManager = CLLocationManager()
     
+    @Published var authorizationState = CLAuthorizationStatus.notDetermined
+    
     @Published var restraurants = [Business]()
     @Published var sights = [Business]()
     
@@ -33,6 +35,10 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
     
     // MARK: - Location manager delegate methods
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        
+        // update the authorizationState property
+        self.authorizationState = locationManager.authorizationStatus
+        
         if locationManager.authorizationStatus == .authorizedAlways ||
             locationManager.authorizationStatus == .authorizedWhenInUse {
             
@@ -106,12 +112,22 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
                         let decoder = JSONDecoder()
                         let result = try decoder.decode(BusinessSearch.self, from: data!)
                         
+                        // SOrt Businesser
+                        var businesses = result.businesses
+                        businesses.sort { (b1, b2) -> Bool in
+                            return b1.distance ?? 0 < b2.distance ?? 0
+                        }
+                        
+                        // Call get image function of the businesses
+                        for b in businesses {
+                            b.getImageData()
+                        }
                         
                         DispatchQueue.main.async {
                             // Assign results to the appropriate property
                             switch category {
-                            case Constants.sightsKey: self.sights = result.businesses
-                            case Constants.restaurantsKey: self.restraurants = result.businesses
+                            case Constants.sightsKey: self.sights = businesses
+                            case Constants.restaurantsKey: self.restraurants = businesses
                             default: break
                             }
                             
