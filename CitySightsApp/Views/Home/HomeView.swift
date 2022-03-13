@@ -20,13 +20,16 @@ struct HomeView: View {
             NavigationView {
                 // Determine if we should show list or map
                 if !isMapShowing {
+                    
                     // Show list
                     VStack (alignment: .leading) {
                         HStack {
                             Image(systemName: "location")
                             Text("San Francisco")
                             Spacer()
-                            Text("Switch to map view")
+                            Button("Switch to map view") {
+                                self.isMapShowing = true
+                            }
                         }
                         Divider()
                         
@@ -37,6 +40,8 @@ struct HomeView: View {
                 }
                 else {
                     // Show map
+                    BusinessMap()
+                        .ignoresSafeArea()
                 }
             }
             
