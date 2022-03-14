@@ -22,6 +22,8 @@
 		9244A43E27DE46FF005F49B8 /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A43D27DE46FF005F49B8 /* BusinessRow.swift */; };
 		9244A44127DE53EA005F49B8 /* BusinessDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A44027DE53E9005F49B8 /* BusinessDetail.swift */; };
 		9244A44427DE730F005F49B8 /* BusinessMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A44327DE730F005F49B8 /* BusinessMap.swift */; };
+		9244A44627DF6EAF005F49B8 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A44527DF6EAF005F49B8 /* OnboardingView.swift */; };
+		9244A44827DF75A8005F49B8 /* LocationDeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A44727DF75A8005F49B8 /* LocationDeniedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		9244A43D27DE46FF005F49B8 /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
 		9244A44027DE53E9005F49B8 /* BusinessDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetail.swift; sourceTree = "<group>"; };
 		9244A44327DE730F005F49B8 /* BusinessMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMap.swift; sourceTree = "<group>"; };
+		9244A44527DF6EAF005F49B8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		9244A44727DF75A8005F49B8 /* LocationDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeniedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		9244A43127DE0751005F49B8 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				9244A44527DF6EAF005F49B8 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 		9244A43227DE075E005F49B8 /* Denied */ = {
 			isa = PBXGroup;
 			children = (
+				9244A44727DF75A8005F49B8 /* LocationDeniedView.swift */,
 			);
 			path = Denied;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 				9244A42B27DA7E0E005F49B8 /* Business.swift in Sources */,
 				9244A43A27DE105A005F49B8 /* BusinessSectionHeader.swift in Sources */,
 				9244A41727D62E7A005F49B8 /* CitySightsApp.swift in Sources */,
+				9244A44827DF75A8005F49B8 /* LocationDeniedView.swift in Sources */,
 				9244A44127DE53EA005F49B8 /* BusinessDetail.swift in Sources */,
 				9244A42D27DE00C2005F49B8 /* BusinessSearch.swift in Sources */,
 				9244A43827DE0E22005F49B8 /* BusinessList.swift in Sources */,
@@ -263,6 +270,7 @@
 				9244A43C27DE4235005F49B8 /* BusinessSection.swift in Sources */,
 				9244A42927D630C8005F49B8 /* ContentModel.swift in Sources */,
 				9244A43027DE048A005F49B8 /* Constants.swift in Sources */,
+				9244A44627DF6EAF005F49B8 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
