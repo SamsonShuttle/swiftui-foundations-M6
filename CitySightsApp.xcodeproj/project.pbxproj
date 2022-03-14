@@ -147,6 +147,7 @@
 				9244A43427DE0782005F49B8 /* HomeView.swift */,
 				9244A44227DE72DE005F49B8 /* Map */,
 				9244A43627DE0E04005F49B8 /* List */,
+				9244A43F27DE53D4005F49B8 /* Detail */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -159,7 +160,6 @@
 				9244A43927DE105A005F49B8 /* BusinessSectionHeader.swift */,
 				9244A43B27DE4234005F49B8 /* BusinessSection.swift */,
 				9244A43D27DE46FF005F49B8 /* BusinessRow.swift */,
-				9244A43F27DE53D4005F49B8 /* Detail */,
 			);
 			path = List;
 			sourceTree = "<group>";
